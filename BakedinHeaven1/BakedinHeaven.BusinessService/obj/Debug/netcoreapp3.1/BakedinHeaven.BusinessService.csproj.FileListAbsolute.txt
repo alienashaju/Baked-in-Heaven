@@ -1,0 +1,12 @@
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\bin\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.deps.json
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\bin\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.dll
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\bin\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.pdb
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.dll
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.pdb
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\obj\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.csprojAssemblyReference.cache
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\obj\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.AssemblyInfoInputs.cache
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\obj\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.AssemblyInfo.cs
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\obj\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.csproj.CoreCompileInputs.cache
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\obj\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.csproj.CopyComplete
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\obj\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.dll
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.BusinessService\obj\Debug\netcoreapp3.1\BakedinHeaven.BusinessService.pdb

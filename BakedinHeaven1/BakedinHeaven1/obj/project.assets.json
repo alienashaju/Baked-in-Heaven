@@ -5766,7 +5766,6 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "BakedinHeaven.BusinessService >= 1.0.0",
-      "BakedinHeaven.DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.1",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.1",
       "Microsoft.EntityFrameworkCore >= 5.0.2",
@@ -5805,9 +5804,6 @@
           "projectReferences": {
             "C:\\Users\\Aliena Shaju\\source\\repos\\BakedinHeaven1\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj": {
               "projectPath": "C:\\Users\\Aliena Shaju\\source\\repos\\BakedinHeaven1\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj"
-            },
-            "C:\\Users\\Aliena Shaju\\source\\repos\\BakedinHeaven1\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Aliena Shaju\\source\\repos\\BakedinHeaven1\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj"
             }
           }
         }

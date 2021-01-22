@@ -24,9 +24,19 @@ namespace BakedinHeaven.DataAccess.Repositories
             Item item =_dbContext.Items.Where(e => e.ItemId == id).FirstOrDefault();
             if(item!=null)
             {
-                _dbContext.Remove(item);
-                _dbContext.SaveChanges();
-                return true;
+                try
+                {
+                    _dbContext.Remove(item);
+                    _dbContext.SaveChanges();
+                    return true;
+
+                }
+
+                catch(Exception)
+                {
+                    throw;
+                }
+               
             }
             else
             {
@@ -52,15 +62,23 @@ namespace BakedinHeaven.DataAccess.Repositories
             Item item = _dbContext.Items.Where(x  => x.ItemId == id).FirstOrDefault();
             if (item != null)
             {
-                item.ItemName = itemChange.ItemName;
-                item.Kcal = itemChange.Kcal;
-                item.Price = itemChange.Price;
-                item.Quantity = itemChange.Quantity;
-                item.WeightInGrams = itemChange.WeightInGrams;
-                item.IsVeg = itemChange.IsVeg;
-                item.IsSpecial = itemChange.IsSpecial;
-                item.AvailableDate = itemChange.AvailableDate;
-                _dbContext.SaveChanges();
+                try
+                {
+                    item.ItemName = itemChange.ItemName;
+                    item.Kcal = itemChange.Kcal;
+                    item.Price = itemChange.Price;
+                    item.Quantity = itemChange.Quantity;
+                    item.WeightInGrams = itemChange.WeightInGrams;
+                    item.IsVeg = itemChange.IsVeg;
+                    item.IsSpecial = itemChange.IsSpecial;
+                    item.AvailableDate = itemChange.AvailableDate;
+                    _dbContext.SaveChanges();
+                }
+                catch(Exception)
+                {
+                    throw;
+                }
+               
 
             }
             return item;

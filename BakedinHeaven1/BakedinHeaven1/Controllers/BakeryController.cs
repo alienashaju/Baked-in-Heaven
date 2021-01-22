@@ -10,17 +10,16 @@ using System.Threading.Tasks;
 namespace BakedinHeaven1.Controllers
 {
 [ApiController]
-[Route("api/Bakery")]
+[Route("api/[controller]")]
 public class BakeryController : ControllerBase
 {
     private readonly IItemService _itemService;
-    private readonly IUserService _userService;
-    private readonly IOrderService _orderService;
-    public BakeryController(IItemService itemService, IUserService userService, IOrderService orderService)
+    
+   
+    public BakeryController(IItemService itemService)
     {
         _itemService = itemService;
-        _userService = userService;
-        _orderService = orderService;
+   
     }
     [HttpGet]
     public IEnumerable<ItemDto> GetAllItems()

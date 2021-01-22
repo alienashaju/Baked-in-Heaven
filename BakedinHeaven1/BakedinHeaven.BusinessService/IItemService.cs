@@ -8,7 +8,7 @@ namespace BakedinHeaven.BusinessService
 {
     public interface IItemService
     {
-        List<ItemDto> GetItems();
+        IEnumerable<ItemDto> GetItems();
         void Add(Item newItem);
         void Update (Item itemChange,int id);
         void Delete(int id);

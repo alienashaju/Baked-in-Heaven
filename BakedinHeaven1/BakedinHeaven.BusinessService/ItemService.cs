@@ -10,9 +10,9 @@ namespace BakedinHeaven.BusinessService
 {
     public class ItemService : IItemService
     {
-        private readonly ItemRepository _itemRepository;
+        private readonly IItemRepository _itemRepository;
 
-        public ItemService(ItemRepository itemRepository)
+        public ItemService(IItemRepository itemRepository)
         {
             _itemRepository = itemRepository;
         }
@@ -75,7 +75,7 @@ namespace BakedinHeaven.BusinessService
             _itemRepository.Delete(id);
         }
 
-        public List<ItemDto> GetItems()
+        public IEnumerable<ItemDto> GetItems()
         {
             var items = _itemRepository.GetAllItems();
 
@@ -90,7 +90,7 @@ namespace BakedinHeaven.BusinessService
                 Quantity = x.Quantity,
                 ItemName = x.ItemName,
                 WeightInGrams = x.WeightInGrams
-            }).ToList();
+            });
         }
 
         public void Update(Item itemChange, int id)

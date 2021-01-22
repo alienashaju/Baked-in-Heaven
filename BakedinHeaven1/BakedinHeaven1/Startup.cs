@@ -13,11 +13,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BakedinHeaven.DataAccess;
+using BakedinHeaven.BusinessService;
+using BakedinHeaven.DataAccess.Repositories;
+using BakedinHeaven.DataAccess.Entities;
+
 
 namespace BakedinHeaven1
 {
     public class Startup
     {
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,13 +34,27 @@ namespace BakedinHeaven1
         public void ConfigureServices(IServiceCollection services)
         {
             var cs = "Host=localhost;Database=BakedinHeavenDb;Username=postgres;Password=Aliena@123";
+            
+            services.AddTransient<IItemService, ItemService>();
+            services.AddTransient<IItemRepository, ItemRepository>();
+            
+
+
             services.AddDbContext<ApplicationDbContext>(options
                => options.UseNpgsql(cs));
+
+
+            
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BakedinHeaven1", Version = "v1" });
             });
+
+            
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +66,7 @@ namespace BakedinHeaven1
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BakedinHeaven1 v1"));
             }
-
+          
             app.UseHttpsRedirection();
 
             app.UseRouting();

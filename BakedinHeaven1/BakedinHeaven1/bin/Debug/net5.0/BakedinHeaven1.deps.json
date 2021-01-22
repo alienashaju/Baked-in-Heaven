@@ -25,7 +25,7 @@
     ".NETCoreApp,Version=v5.0": {
       "BakedinHeaven1/1.0.0": {
         "dependencies": {
-          "BakedinHeaven.DataAccess": "1.0.0",
+          "BakedinHeaven.BusinessService": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.1",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "5.0.1",
           "Microsoft.EntityFrameworkCore": "5.0.2",
@@ -1336,6 +1336,17 @@
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
+        }
+      },
+      "BakedinHeaven.BusinessService/1.0.0": {
+        "dependencies": {
+          "BakedinHeaven.DataAccess": "1.0.0"
+        },
+        "runtime": {
+          "BakedinHeaven.BusinessService.dll": {}
+        },
+        "compile": {
+          "BakedinHeaven.BusinessService.dll": {}
         }
       },
       "BakedinHeaven.DataAccess/1.0.0": {
@@ -3813,6 +3824,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "BakedinHeaven.BusinessService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "BakedinHeaven.DataAccess/1.0.0": {
       "type": "project",

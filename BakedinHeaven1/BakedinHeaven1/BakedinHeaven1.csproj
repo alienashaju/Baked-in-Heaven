@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BakedinHeaven.BusinessService\BakedinHeaven.BusinessService.csproj" />
-    <ProjectReference Include="..\BakedinHeaven.DataAccess\BakedinHeaven.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
