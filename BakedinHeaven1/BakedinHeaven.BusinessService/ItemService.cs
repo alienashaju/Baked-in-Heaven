@@ -17,15 +17,13 @@ namespace BakedinHeaven.BusinessService
             _itemRepository = itemRepository;
         }
 
-        public void Add(Item newItem)
+        public void AddItem(Item newItem)
         {
             List<Item> data = new List<Item>();
             data = _itemRepository.GetItems(); // fetch the entire database
             int Total = data.Where(x => x.AvailableDate == newItem.AvailableDate).Count();
-
             var count = 0;
             var flag = 0;
-
             if (Total < 15)
             {
                 foreach (var Element in data)
@@ -37,9 +35,9 @@ namespace BakedinHeaven.BusinessService
                     }
 
                     else { flag = 1; }
-
                 }
             }
+
             if (flag == 1)
             {
 
@@ -56,13 +54,13 @@ namespace BakedinHeaven.BusinessService
                         }
 
                     }
-                    if (count > 4)
+
+                    if (count < 4)
                     {
-
+                        _itemRepository.Add(newItem);
                     }
-
-
                 }
+
                 else
                 {
                     _itemRepository.Add(newItem);
@@ -75,7 +73,7 @@ namespace BakedinHeaven.BusinessService
             _itemRepository.Delete(id);
         }
 
-        public IEnumerable<ItemDto> GetItems()
+        public List<ItemDto> GetAllItems()
         {
             var items = _itemRepository.GetAllItems();
 
@@ -90,15 +88,69 @@ namespace BakedinHeaven.BusinessService
                 Quantity = x.Quantity,
                 ItemName = x.ItemName,
                 WeightInGrams = x.WeightInGrams
-            });
+            }).OrderBy(x => x.ItemName).ThenBy(x => x.AvailableDate).ToList(); ;
         }
 
-        public void Update(Item itemChange, int id)
+        public void UpdateItem(Item itemChange, int id)
         {
-            _itemRepository.Update(itemChange, id);
+            List<Item> data = new List<Item>();
+            data = _itemRepository.GetItems(); // fetch the entire database
+            int Total = data.Where(x => x.AvailableDate == itemChange.AvailableDate).Count();
+            var count = 0;
+            var flag = 0;
+
+            if (Total < 15)
+            {
+                foreach (var Element in data)
+                {
+                    if (Element.ItemName == itemChange.ItemName)
+                    {
+                        break;
+                        // " with same name already exist for the date";
+                    }
+
+                    else { flag = 1; }
+
+                }
+            }
+
+            if (flag == 1)
+            {
+                if (itemChange.IsSpecial == true)
+                {
+                    foreach (var Element in data)
+                    {
+                        if (Element.AvailableDate == itemChange.AvailableDate)
+                        {
+                            if (Element.IsSpecial == true)
+                            {
+                                count++;
+                            }
+                        }
+
+                    }
+                    if (count < 4)
+                    {
+                        _itemRepository.Update(itemChange, id);
+                    }
+                }
+                else
+                {
+                    _itemRepository.Update(itemChange, id);
+                }
+                
+            }
         }
+
+
     }
 }
+
+
+
+
+        
+    
 
        
 

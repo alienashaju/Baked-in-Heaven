@@ -43,9 +43,6 @@ namespace BakedinHeaven1
             services.AddDbContext<ApplicationDbContext>(options
                => options.UseNpgsql(cs));
 
-
-            
-            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

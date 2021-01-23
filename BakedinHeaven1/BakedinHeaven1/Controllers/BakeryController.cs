@@ -22,16 +22,16 @@ public class BakeryController : ControllerBase
    
     }
     [HttpGet]
-    public IEnumerable<ItemDto> GetAllItems()
+    public List<ItemDto> GetAllItems()
     {
 
-        return _itemService.GetItems();
+        return _itemService.GetAllItems();
     }
 
     [HttpPost]
-    public void Add(Item item)
+    public void AddItem(Item item)
     {
-        _itemService.Add(item);
+        _itemService.AddItem(item);
     }
 
     [HttpDelete("{Id}")]
@@ -42,9 +42,9 @@ public class BakeryController : ControllerBase
 
 
     [HttpPut("{Id}")]
-    public void Update(Item item, int Id)
+    public void UpdateItem(Item item, int Id)
     {
-        _itemService.Update(item, Id);
+        _itemService.UpdateItem(item, Id);
     }
 }
 }
