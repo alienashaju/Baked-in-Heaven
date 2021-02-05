@@ -1,0 +1,24 @@
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.deps.json
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.runtimeconfig.json
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.runtimeconfig.dev.json
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.dll
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.pdb
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.csprojAssemblyReference.cache
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.AssemblyInfo.cs
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.dll
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.pdb
+C:\Users\Aliena Shaju\source\repos\BakedinHeaven1\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.genruntimeconfig.cache
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.deps.json
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.runtimeconfig.json
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.runtimeconfig.dev.json
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.dll
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\bin\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.pdb
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.csprojAssemblyReference.cache
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.AssemblyInfoInputs.cache
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.AssemblyInfo.cs
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.dll
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.pdb
+C:\Users\aliena.shaju\Documents\bakedinheaven\bakedinheavenapi\BakedinHeaven.DataAccess\obj\Debug\netcoreapp3.1\BakedinHeaven.DataAccess.genruntimeconfig.cache
