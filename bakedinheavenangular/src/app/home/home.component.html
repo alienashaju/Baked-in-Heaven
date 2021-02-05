@@ -1,0 +1,33 @@
+
+
+
+<div class ="container">
+    <div class ="logo-part">
+        <img  class="imagecontainer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCTHTqczYF0PdUYLZ0gtvBFae-VNSFQ6XAmg&usqp=CAU"   alt="Bakery">
+        <p>Baked in Heaven</p>
+    </div>
+    <div class =login-part>
+        <div class ="login-form">
+            <form id="login">
+                <label class=login-label>Username</label>
+                <br>
+                <input class="inp" [(ngModel)]="namevalue" name="username" type ="text" placeholder="Username"   required><br><br>
+                <label class="login-label">password</label>
+                <br>
+                <input class="inp" [(ngModel)]="passvalue" name="password" type = "Password" placeholder="Password"  required><br><br>
+                <button id ="login-button" (click)="login()">Login</button>
+                <br>
+                <h4>or</h4>
+                <button id ="signup-button">Sign Up</button>
+            </form>    
+        </div>
+        <div class="bakery-details">
+            <img src="https://static.toiimg.com/photo/48201473.cms" alt="Bakery" class ="bakeryimage">
+            <div class="contact">
+                <h4>Email : {{Email}} <br>Phone :  {{Phone}}</h4>
+            </div>
+
+        </div>
+    </div>        
+        
+</div>
