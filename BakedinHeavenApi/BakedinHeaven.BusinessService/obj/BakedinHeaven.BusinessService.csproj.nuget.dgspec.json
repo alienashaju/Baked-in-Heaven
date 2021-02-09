@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj": {}
+    "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj": {
+    "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj",
+        "projectUniqueName": "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj",
         "projectName": "BakedinHeaven.BusinessService",
-        "projectPath": "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj",
+        "projectPath": "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.BusinessService\\BakedinHeaven.BusinessService.csproj",
         "packagesPath": "C:\\Users\\aliena.shaju\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.BusinessService\\obj\\",
+        "outputPath": "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.BusinessService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aliena.shaju\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj"
+              "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj": {
+    "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj",
         "projectName": "BakedinHeaven.DataAccess",
-        "projectPath": "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj",
+        "projectPath": "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.DataAccess\\BakedinHeaven.DataAccess.csproj",
         "packagesPath": "C:\\Users\\aliena.shaju\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aliena.shaju\\Documents\\bakedinheaven\\bakedinheavenapi\\BakedinHeaven.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\aliena.shaju\\Desktop\\Baked-in-Heaven\\BakedinHeavenApi\\BakedinHeaven.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aliena.shaju\\AppData\\Roaming\\NuGet\\NuGet.Config",

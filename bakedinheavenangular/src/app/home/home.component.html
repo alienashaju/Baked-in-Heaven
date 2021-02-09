@@ -11,12 +11,12 @@
             <form id="login">
                 <label class=login-label>Username</label>
                 <br>
-                <input class="inp" [(ngModel)]="namevalue" name="username" type ="text" placeholder="Username"   required><br><br>
+                <input class="inp"  name="username" type ="text" placeholder="Username" [(ngModel)]="myusername"  required><br><br>
                 <label class="login-label">password</label>
                 <br>
-                <input class="inp" [(ngModel)]="passvalue" name="password" type = "Password" placeholder="Password"  required><br><br>
+                <input class="inp"  name="password" type = "Password" placeholder="Password" [(ngModel)]="mypassword"  required><br><br>
                 <button id ="login-button" (click)="login()">Login</button>
-                <br>
+                <br><br>
                 <h4>or</h4>
                 <button id ="signup-button">Sign Up</button>
             </form>    

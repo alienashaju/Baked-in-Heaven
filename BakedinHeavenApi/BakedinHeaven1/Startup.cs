@@ -54,7 +54,7 @@ namespace BakedinHeaven1
             services.AddDbContext<ApplicationDbContext>(options
                => options.UseNpgsql(cs));
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BakedinHeaven1", Version = "v1" });

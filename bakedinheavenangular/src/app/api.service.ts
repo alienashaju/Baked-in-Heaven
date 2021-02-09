@@ -8,9 +8,7 @@ import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/temp
   providedIn: 'root'
 })
 export class ApiService {
- 
-
-
+  
   constructor(public http: HttpClient) { }
 
 
@@ -18,24 +16,23 @@ export class ApiService {
     return this.http.get("https://localhost:44319/api/Bakery");
   }
   getItem(id:any){
-    return this.http.get('http://localhost:44319/api/Bakery/${id}')
+    return this.http.get(`https://localhost:44319/api/Bakery/${id}`)
     }
   
-  postItem(item: any){
-    this.http.post('http://localhost:44319/api/Bakery',item).subscribe(res => {
-        console.log(res);
-    })
+  postItem(Item: any){
+    this.http.post("https://localhost:44319/api/Bakery",Item).subscribe(res => {
+        console.log(res)
+    });
+  }
 
-}
-
-  deleteItem(item:any){
-     this.http.delete('http://localhost:44319/api/Bakery/${item.itemId}',item).subscribe(res => {
-      console.log(res);
+  deleteItem(Item: any){
+    this.http.delete(`https://localhost:44319/api/Bakery/${Item.itemId}`,Item).subscribe(res => {
+      console.log(res)
   });
-}
+  }
 
   putItem(Item: any){
-    this.http.put(`http://localhost:44319/api/Bakery/${Item.itemId}`,Item).subscribe(res => {
+    this.http.put(`https://localhost:44319/api/Bakery/${Item.itemId}`,Item).subscribe(res => {
         console.log(res);
     });
   }
@@ -44,13 +41,12 @@ export class ApiService {
   {
     return this.http.get("https://localhost:44319/api/User");
   }
+  postUsers(user:any)
+  {
+    return this.http.post("https://localhost:44319/api/User",user);
+  }
  
-  /*deleteItem(item: any){
-    this.http.delete(`http://localhost:44319/api/Bakery/${item.itemId}`,item).subscribe(res => {
-        console.log(res);
-       
-    });
-  }*/
+  
  
 
 }

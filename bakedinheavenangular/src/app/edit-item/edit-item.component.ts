@@ -9,26 +9,23 @@ import{ActivatedRoute, Router} from '@angular/router';
 })
 export class EditItemComponent  {
   panelTitle:any
-  items: any = {} 
+  items: any = {}
   
-    itemName =""
-    price= ""
-    quantity=""
-    weightInGrams=""
-    isVeg=""
-    isSpecial=""
-    kcal=""
-    availableDate=""
+  itemid:any
+  
+   
   
   
-  constructor(public apiService: ApiService, private route:ActivatedRoute) {
+  constructor(public apiService: ApiService, private route:ActivatedRoute,public router:Router) {
    
   }
   
   ngOnInit() {
     this.route.paramMap.subscribe(parameterMap => {
-      const id = parameterMap.get('id')
-      this.getItem(id)
+      const id = parameterMap.get('id');
+      this.getItem(id);
+      this.itemid=id;
+      
     });
   }
   
@@ -36,23 +33,50 @@ export class EditItemComponent  {
   {
     if(id !=0){
       this.items= this.apiService.getItem(id).subscribe(
-        (item) => { this.items = item
+        (item) => { this.items = item;
           console.log(this.items)
         });
-      this.panelTitle = 'Edit Employee';
+      this.panelTitle = 'Edit Item';
     }
     else{
-      this.panelTitle = 'Create Employee';
+      this.panelTitle = 'Add Item';
       this.items ={
+        itemId :"",
         itemName :"",
         price : "",
         quantity :"",
-        weightInGrams:""
+        weightInGrams:"",
+        availableDate:"",
+        isVeg :"",
+        isSpecial :""
         
       }
+      
     }
     
   }
+  addClick(items:any){
+    if(confirm('Are you sure??')){
+      this.apiService.postItem(items);
+      this.router.navigate(['/admin'])
+        //this.refreshItems();
+  }
+}
+
+  editClick(items:any){
+    if(confirm('Are you sure??')){
+      this.apiService.putItem(items);
+      this.router.navigate(['/admin'])
+        //this.refreshItems();  
+  }
+}
+
+  refreshItems(){
+    this.apiService.getItems().subscribe(data=>{
+     this.items=data;
+    });
+ }
+
 
 }
 
