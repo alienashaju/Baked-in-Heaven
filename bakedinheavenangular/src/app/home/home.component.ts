@@ -47,6 +47,10 @@ export class HomeComponent implements OnInit {
     });
   
     }
+  signup()
+  {
+    this.router.navigate(['/add-user']);
+  }
     
     
   }

@@ -2,7 +2,7 @@
   <div class="special-items">
     <h3>Special Items</h3>
     <ng-container *ngFor="let item of items"  >
-      <ul  class="items-disp">
+      <ul *ngIf="checkdate(item)" class="items-disp">
         <li class="name-label" *ngIf="item.isSpecial==true"
           [class.selected]="item === selectedItem"
           (click)="onSelect(item)">
@@ -18,7 +18,7 @@
     <li class ="item-details">IsVeg : {{selectedItem.isVeg}}</li>
     <li class ="item-details">Weight in Grams : {{selectedItem.weightInGrams}}</li>
     <li class ="item-details">Kcal : {{selectedItem.kcal}}</li>
-    <li class ="item-details">Available Date : {{selectedItem.availableDate}}</li>
+    <li class ="item-details">Available Date : {{selectedItem.availableDate | date}}</li>
   </div>
 </div>
 
@@ -26,7 +26,7 @@
   <div class ="daily-items">
     <h3>Items</h3>
     <ng-container *ngFor="let item of items">
-      <ul class="items-disp">
+      <ul *ngIf="checkdate(item)" class="items-disp">
         <li   class="name-label" *ngIf="item.isSpecial==false"
           [class.selected]="item === selectedItem"
           (click)="onSelect(item)">

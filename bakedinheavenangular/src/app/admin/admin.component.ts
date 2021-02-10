@@ -15,12 +15,13 @@ export class AdminComponent  {
     this.apiService.getItems().subscribe((res:any) =>{
       this.items = res
       console.log(this.items)
+      this.refreshItems();
     });
  
     } 
-    ngOnInit(): void {
-      this.refreshItems();
-    }
+  ngOnInit(): void {
+    this.refreshItems();
+  }
 
   onClick(id:number)
   {

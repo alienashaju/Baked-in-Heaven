@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { EditItemComponent } from './edit-item/edit-item.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ItemsComponent,
     AdminComponent,
     EditItemComponent,
+    
   ],
   imports: [
     BrowserModule,

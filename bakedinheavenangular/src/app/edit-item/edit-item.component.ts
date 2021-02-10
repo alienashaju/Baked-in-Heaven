@@ -26,6 +26,7 @@ export class EditItemComponent  {
       this.getItem(id);
       this.itemid=id;
       
+      
     });
   }
   
@@ -59,7 +60,7 @@ export class EditItemComponent  {
     if(confirm('Are you sure??')){
       this.apiService.postItem(items);
       this.router.navigate(['/admin'])
-        //this.refreshItems();
+        this.refreshItems();
   }
 }
 
@@ -67,7 +68,7 @@ export class EditItemComponent  {
     if(confirm('Are you sure??')){
       this.apiService.putItem(items);
       this.router.navigate(['/admin'])
-        //this.refreshItems();  
+        this.refreshItems();  
   }
 }
 
