@@ -73,16 +73,12 @@ export class EditItemComponent  {
     if (this.addform.invalid) {
       return;
       }
-    if(items.itemName == this.items.itemName)
-    {
-      window.alert("name exists")
-    }
-    else{
+   
       this.apiService.postItem(items);
       this.router.navigate(['/admin'])
         this.refreshItems();
     }
-}
+
 
   editClick(items:any){
     this.submitted = true;
