@@ -1,86 +1,116 @@
-<div class="d-flex flex-row bd-highlight mb-3">
-  <h1>{{panelTitle}}</h1>
-  <div class="form-froup row" style="width: 60%;">
-    
-    <label class="col-sm-2 col-form-label">Item Id</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="items.itemId"
-        placeholder="Enter Item Id">   
-    </div>
+<div class="card mx-auto">
+  <h4 class="card-header">{{panelTitle}}</h4>
+  <div class="card-body">
+      <form [formGroup]="addform" >
+          <div class="form-group">
+              <label for="itemName">Item Name</label>
+              <input type="text" formControlName="itemName" class="form-control" [(ngModel)]="items.itemName" [ngClass]="{'is-invalid': (submitted || addform.get('itemName')!.touched ||
+                  addform.get('itemName')!.dirty) && addform.get('itemName')!.errors}" >  
+              <div  *ngIf ="(submitted || (addform.get('itemName')!.touched )||  
+                  addform.get('itemName')!.dirty) && addform.get('itemName')!.errors" class="invalid-feedback">
+                  <div *ngIf="addform.get('itemName')!.errors!.required">Item Name is required</div>
+              </div>
+          </div>
 
-    <label class="col-sm-2 col-form-label">Item Name</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="items.itemName"
-        placeholder="Enter Item Name">   
-    </div>
-    <label class="col-sm-2 col-form-label">Price</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="items.price"
-        placeholder="Enter item Price">
-        
-    </div>
+          <div class="form-group">
+              <label for="price">Price</label>
+              <input type="text" formControlName="price" class="form-control" [(ngModel)]="items.price" [ngClass]="{'is-invalid': (submitted || addform.get('price')!.touched ||
+                  addform.get('price')!.dirty) && addform.get('price')!.errors}" >
+              <div  *ngIf ="(submitted || addform.get('price')!.touched ||
+                  addform.get('price')!.dirty) && addform.get('price')!.errors" class="invalid-feedback">
+                  <div *ngIf="addform.get('price')!.errors!.required" >price is required</div>
+              </div>  
+          </div>
 
-    <label class="col-sm-2 col-form-label">Quantity</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="items.quantity"
-        placeholder="Enter Item Quantity">
-        
-    </div>
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="text" formControlName="quantity" class="form-control" [(ngModel)]="items.quantity" [ngClass]="{'is-invalid': (submitted || addform.get('quantity')!.touched ||
+                addform.get('quantity')!.dirty) && addform.get('quantity')!.errors}" >
+            <div  *ngIf ="(submitted || addform.get('quantity')!.touched ||
+                addform.get('quantity')!.dirty) && addform.get('quantity')!.errors" class="invalid-feedback">
+                <div *ngIf="addform.get('quantity')!.errors!.required" >Quantity is required</div>
+            </div>  
+          </div>
 
-    <label class="col-sm-2 col-form-label">Weight in Grams</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="items.weightInGrams"
-        placeholder="Enter Weight in Grams">
-    </div>
+          <div class="form-group">
+            <label for="weight">Weight in Grams</label>
+            <input type="text" formControlName="weight" class="form-control" [(ngModel)]="items.weightInGrams" [ngClass]="{'is-invalid': (submitted || addform.get('weight')!.touched ||
+                addform.get('weight')!.dirty) && addform.get('weight')!.errors}" >
+            <div  *ngIf ="(submitted || addform.get('weight')!.touched ||
+                addform.get('weight')!.dirty) && addform.get('weight')!.errors" class="invalid-feedback">
+                <div *ngIf="addform.get('weight')!.errors!.required" >Weight is required</div>
+            </div>  
+          </div>
+          <div class="form-group">
+            <label for="kcal">Kcal</label>
+            <input type="text" formControlName="kcal" class="form-control" [(ngModel)]="items.kcal" [ngClass]="{'is-invalid': (submitted || addform.get('kcal')!.touched ||
+                addform.get('kcal')!.dirty) && addform.get('kcal')!.errors}" >
+            <div  *ngIf ="(submitted || addform.get('kcal')!.touched ||
+                addform.get('kcal')!.dirty) && addform.get('kcal')!.errors" class="invalid-feedback">
+                <div *ngIf="addform.get('kcal')!.errors!.required" >kcal is required</div>
+            </div>  
+          </div>
+          <div class="form-group">
+            <label for="date">Available Date</label>
+            <input type="text"  formControlName="date" placeholder="yyyy-MM-dd" class="form-control"[(ngModel)]="items.availableDate" [ngClass]="{'is-invalid': (submitted || addform.get('date')!.touched ||
+                addform.get('date')!.dirty) && addform.get('date')!.errors}" >
+            <div  *ngIf ="(submitted || addform.get('date')!.touched ||
+                addform.get('date')!.dirty) && addform.get('date')!.errors" class="invalid-feedback">
+                <div *ngIf="addform.get('date')!.errors!.required" >Date is required</div>
+            </div>  
+          </div>
+          <div class="form-group">
+            <label for="image">Image Url</label>
+            <input type="text" formControlName="image" class="form-control" [(ngModel)]="items.image" [ngClass]="{'is-invalid': (submitted || addform.get('image')!.touched ||
+                addform.get('image')!.dirty) && addform.get('image')!.errors}" >
+            <div  *ngIf ="(submitted || addform.get('image')!.touched ||
+                addform.get('image')!.dirty) && addform.get('image')!.errors" class="invalid-feedback">
+                <div *ngIf="addform.get('image')!.errors!.required" >Image url is required</div>
+            </div>  
+          </div>
+          <div class="form-group">
+            <label for="isveg" >Is Veg</label><br>
+            <div >
+            <label for="veg" >true</label>
+            <input type="radio" id="veg" formControlName="isveg" [value]="true" name="isveg" [(ngModel)]="items.isVeg"  [ngClass]="{'is-invalid': submitted || addform.get('isveg')!.errors}" >
+            <br>
+            <label for="nonveg" >false</label>
+            <input type="radio" id="nonveg" formControlName="isveg" [value]="false" name="isveg"  [(ngModel)]="items.isVeg" [ngClass]="{'is-invalid': submitted || addform.get('isveg')!.errors}">
+            </div>
+            <div  *ngIf =" submitted || addform.get('isveg')!.errors" class="invalid-feedback">
+                <div  *ngIf="addform.get('isveg')!.errors!.required" >value is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="isspecial">Is Special</label>
+            <div >
+            <label for="special">true
+            <input type="radio" id="special" formControlName="isspecial" [value]="true"  name="isspecial" [(ngModel)]="items.isSpecial" >
+            </label><br>
+            <label for="notspecial">false
+            <input type="radio" id="notspecial" formControlName="isspecial" [value]="false"  name="isspecial"  [(ngModel)]="items.isSpecial" >
+            </label>
+           </div>
+            <div  *ngIf ="(submitted || addform.get('isveg')!.touched ||
+                addform.get('isveg')!.dirty) && addform.get('isveg')!.errors" class="invalid-feedback">
+                <div  *ngIf="addform.get('isveg')!.errors!.required" >value is required</div>
+            </div>
+          </div>
 
-    <label class="col-sm-2 col-form-label">Kcal</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="items.kcal"
-        placeholder="Enter Kcal">
-    </div>
-
-    <label class="col-sm-2 col-form-label">Is Veg</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="items.isVeg"
-        placeholder="Enter IsVeg or not">
-    </div>
-    <label class="col-sm-2 col-form-label">Is Special</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="items.isSpecial"
-        placeholder="Enter IsSpecial or not">
-    </div>
-    <label class="col-sm-2 col-form-label">Available date</label>
-    <div class="col-sm-10">
-        <input type="text" class="form-control" [(ngModel)]="items.availableDate"
-        placeholder="Enter Available date">
-    </div>
-
-    <!--<label class="col-sm-2 col-form-label">IsVeg</label>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="isVeg" id="isVeg1" [(ngModel)]="items.isVeg" >
-        <label class="form-check-label" for="flexRadioDefault1">
-          true
-        </label>
-        <input class="form-check-input" type="radio" name="isVeg" id="isVeg2"[(ngModel)]="items.isVeg"  >
-        <label class="form-check-label" for="flexRadioDefault2">
-          false
-        </label>
-      </div>
-      
-      <label class="col-sm-2 col-form-label">Is Special</label>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" [(ngModel)]="items.isSpecial">
-        <label class="form-check-label" for="flexRadioDefault3">
-          true
-        </label>
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" [(ngModel)]="items.isSpecial">
-        <label class="form-check-label" for="flexRadioDefault4">
-          false
-        </label>
-      </div>-->
+          <div class="form-group">
+              <button  class="btn btn-primary" (click)=addClick(items) *ngIf="itemid==0" type ="submit">
+                 Add
+              </button>
+              <button  class="btn btn-primary" (click)=editClick(items) *ngIf="itemid!=0" type ="submit">
+                Edit
+             </button>
+          </div>
+      </form>
   </div>
-  </div>
-  
-<button (click)="addClick(items)" *ngIf="itemid==0" class="btn btn-primary">Add</button>
-<button (click)="editClick(items)" *ngIf="itemid!=0" class="btn btn-primary">Edit</button>
+</div>
+
+
+
+
+
 

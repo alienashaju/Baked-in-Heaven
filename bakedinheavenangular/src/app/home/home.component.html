@@ -1,33 +1,45 @@
 
-
-
 <div class ="container">
-    <div class ="logo-part">
-        <img  class="imagecontainer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCTHTqczYF0PdUYLZ0gtvBFae-VNSFQ6XAmg&usqp=CAU"   alt="Bakery">
-        <p>Baked in Heaven</p>
-    </div>
-    <div class =login-part>
-        <div class ="login-form">
-            <form id="login">
-                <label class=login-label>Username</label>
-                <br>
-                <input class="inp"  name="username" type ="text" placeholder="Username" [(ngModel)]="myusername"  required><br><br>
-                <label class="login-label">password</label>
-                <br>
-                <input class="inp"  name="password" type = "Password" placeholder="Password" [(ngModel)]="mypassword"  required><br><br>
-                <button id ="login-button" (click)="login()">Login</button>
-                <br><br>
-                <h4>or</h4>
-                <button id ="signup-button" (click)="signup()">Sign Up</button>
-            </form>    
-        </div>
-        <div class="bakery-details">
-            <img src="https://static.toiimg.com/photo/48201473.cms" alt="Bakery" class ="bakeryimage">
-            <div class="contact">
-                <h4>Email : {{Email}} <br>Phone :  {{Phone}}</h4>
+    <mat-toolbar class="head">
+        <mat-toolbar-row>
+            <img  class="imagecontainer" src="https://st3.depositphotos.com/3986623/12694/v/950/depositphotos_126943076-stock-illustration-vintage-retro-bakery-logo-badge.jpg"   alt="Bakery"> 
+            <a class="name" href="https://fontmeme.com/calligraphy-fonts/"><img src="https://fontmeme.com/permalink/210213/b810b8eea15b209503e677af917c607e.png" alt="calligraphy-fonts" border="0"></a>
+            <span class="menu-spacer"></span>
+            <div class="links">
+            <a mat-button [routerLink]="'/home'"> Home </a>
+            <a mat-button [routerLink]="'/items'"> Items </a>
+            <a mat-button [routerLink]="'/login'"> Login </a>
             </div>
-
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="bakeryimg-cont">
+        <img src="https://www.passarella.gr/files/eshop/homePageSlideshow/P1170081_295_48.jpg" alt="Bakery" class ="bakeryimage">
+    </div>
+    
+    <div class="contact"  >
+        <h1>Contact Us</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <mat-icon >phone</mat-icon><br><br>
+                <h2>phone</h2>
+                <p>+91-996523410</p>
+                <p>+91-753421784</p>
+            </div>
+            <div class="col-sm-4">
+                <mat-icon> location_on</mat-icon><br><br>
+                <h2>Address</h2>
+                <p>Baked in Heaven<br>
+                    9-A Hauz Khas Village<br>
+                     New Delhi<br>110001 </p>
+            </div>
+            <div class="col-sm-4">
+                <mat-icon> mail</mat-icon><br><br>
+                <h2>Email</h2>
+                <p>bakedinheaven@gmail.com </p>
+            </div> 
         </div>
-    </div>        
+       
+        
+    </div>
         
 </div>

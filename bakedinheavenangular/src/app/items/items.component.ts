@@ -11,6 +11,7 @@ import { DatePipe } from '@angular/common';
 export class ItemsComponent {
 //items :any= {};
   items:any;
+  specialItem:any;
   todaydate :any=new Date()
   tomorrow :any =new Date();
   
@@ -25,13 +26,8 @@ export class ItemsComponent {
     })
   }
  
- 
-  selectedItem:any;
-  onSelect(item:any){
-    this.selectedItem =item; 
-    
   
-  }
+    
  
   checkdate(item:any)
   {

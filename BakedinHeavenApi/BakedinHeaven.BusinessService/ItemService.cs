@@ -88,7 +88,8 @@ namespace BakedinHeaven.BusinessService
                 Price = x.Price,
                 Quantity = x.Quantity,
                 ItemName = x.ItemName,
-                WeightInGrams = x.WeightInGrams
+                WeightInGrams = x.WeightInGrams,
+                image = x.image
             }).OrderBy(x => x.ItemName).ThenBy(x => x.AvailableDate).ToList(); ;
         }
 

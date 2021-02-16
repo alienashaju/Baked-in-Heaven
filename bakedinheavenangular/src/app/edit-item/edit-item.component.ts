@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import{ApiService} from '../api.service';
 import{ActivatedRoute, Router} from '@angular/router';
+import { FormGroup,FormBuilder, Validators } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-edit-item',
@@ -10,13 +13,13 @@ import{ActivatedRoute, Router} from '@angular/router';
 export class EditItemComponent  {
   panelTitle:any
   items: any = {}
-  
+  submitted = false;
   itemid:any
-  
+  addform!: FormGroup ;
    
   
   
-  constructor(public apiService: ApiService, private route:ActivatedRoute,public router:Router) {
+  constructor(public apiService: ApiService, private route:ActivatedRoute,public router:Router,private fb:FormBuilder) {
    
   }
   
@@ -25,9 +28,19 @@ export class EditItemComponent  {
       const id = parameterMap.get('id');
       this.getItem(id);
       this.itemid=id;
-      
-      
-    });
+      });
+      this.addform = this.fb.group({
+        itemName:['',Validators.required],
+        price:['',Validators.required],
+        quantity:['',Validators.required],
+        weight:['',Validators.required],
+        kcal:['',Validators.required],
+        isveg:['',Validators.required],
+        isspecial:['',Validators.required],
+        date:['',Validators.required],
+        image:['',Validators.required],
+
+      });
   }
   
   private getItem(id:any)
@@ -42,7 +55,6 @@ export class EditItemComponent  {
     else{
       this.panelTitle = 'Add Item';
       this.items ={
-        itemId :"",
         itemName :"",
         price : "",
         quantity :"",
@@ -57,18 +69,31 @@ export class EditItemComponent  {
     
   }
   addClick(items:any){
-    if(confirm('Are you sure??')){
+    this.submitted = true;
+    if (this.addform.invalid) {
+      return;
+      }
+    if(items.itemName == this.items.itemName)
+    {
+      window.alert("name exists")
+    }
+    else{
       this.apiService.postItem(items);
       this.router.navigate(['/admin'])
         this.refreshItems();
-  }
+    }
 }
 
   editClick(items:any){
+    this.submitted = true;
+    if (this.addform.invalid) {
+      return;
+      }
     if(confirm('Are you sure??')){
       this.apiService.putItem(items);
       this.router.navigate(['/admin'])
         this.refreshItems();  
+
   }
 }
 
@@ -76,9 +101,9 @@ export class EditItemComponent  {
     this.apiService.getItems().subscribe(data=>{
      this.items=data;
     });
- }
+    }
+  }
 
 
-}
 
 

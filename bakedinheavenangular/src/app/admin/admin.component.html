@@ -1,10 +1,23 @@
-<div class="col-md-12">  
-    <h2> Item Details</h2>  
+<div class ="container">
+  <mat-toolbar class="head">
+      <mat-toolbar-row>
+          <img  class="imagecontainer" src="https://st3.depositphotos.com/3986623/12694/v/950/depositphotos_126943076-stock-illustration-vintage-retro-bakery-logo-badge.jpg"   alt="Bakery"> 
+          <a class="name" href="https://fontmeme.com/calligraphy-fonts/"><img src="https://fontmeme.com/permalink/210213/b810b8eea15b209503e677af917c607e.png" alt="calligraphy-fonts" border="0"></a>
+          <span class="menu-spacer"></span>
+          <div class="links">
+          <a mat-button [routerLink]="'/home'"> Home </a>
+          <a mat-button [routerLink]="'/items'"> Items </a>
+          </div>
+      </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+
+<div class="col-md-12">  <br>
     <div class="table-responsive table-container">  
       <table class="table">  
         <thead>  
           <tr>  
-            <th>Id</th>  
             <th>Item Name</th>  
             <th>Price</th>  
             <th>Quantity</th>
@@ -13,13 +26,13 @@
             <th>Is Special</th>
             <th>Is Kcal</th>
             <th>Available Date</th>
+            <th  style="width:200px" >Image</th>
             
           </tr>  
         </thead>  
         <tbody>  
           <tr *ngFor="let item of items">  
-            <td class="hidden">{{item.itemId}}</td> 
-            <td>{{item.itemName}}</td>  
+            <td >{{item.itemName}}</td>  
             <td>{{item.price}}</td>  
             <td>{{item.quantity}}</td> 
             <td>{{item.weightInGrams}}</td>
@@ -27,10 +40,10 @@
             <td>{{item.isSpecial}}</td>
             <td>{{item.kcal}}</td>
             <td>{{item.availableDate}}</td>
-
+            <td class="image">{{item.image}}</td>
             <td>  
-              <button (click)="deleteitem(item)" class="btn btn-info"> Delete</button>  
-              <button (click)="onClick(item.itemId)" style="margin-left: 20px;" class="btn btn-info"> Edit</button>  
+              <button (click)="deleteitem(item)" class="btn btn-info"> Delete</button><br> <br>
+              <button (click)="onClick(item.itemId)" style="margin-left: 10px;" class="btn btn-info"> Edit</button>  
             </td>  
           </tr>  
         </tbody>  

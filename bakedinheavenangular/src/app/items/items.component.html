@@ -1,40 +1,72 @@
-<div class="special-cont">
-  <div class="special-items">
-    <h3>Special Items</h3>
+<div class="nav-header">
+  <mat-toolbar class="head">
+    <mat-toolbar-row>
+        <img  class="imagecontainer" src="https://st3.depositphotos.com/3986623/12694/v/950/depositphotos_126943076-stock-illustration-vintage-retro-bakery-logo-badge.jpg"   alt="Bakery"> 
+        <a class="name" href="https://fontmeme.com/calligraphy-fonts/"><img src="https://fontmeme.com/permalink/210213/b810b8eea15b209503e677af917c607e.png" alt="calligraphy-fonts" border="0"></a>
+        <span class="menu-spacer"></span>
+        <div class="links">
+        <a mat-button [routerLink]="'/home'"> Home </a>
+        <a mat-button [routerLink]="'/items'"> Items </a>
+        <a mat-button [routerLink]="'/login'"> Login </a>
+        </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  </div>
+<div class="container">
     <ng-container *ngFor="let item of items"  >
-      <ul *ngIf="checkdate(item)" class="items-disp">
-        <li class="name-label" *ngIf="item.isSpecial==true"
-          [class.selected]="item === selectedItem"
-          (click)="onSelect(item)">
-          <!--<span class="badge">{{item.itemId}}</span>-->{{item.itemName}}
-        </li>
-      </ul>
+        <div *ngIf="checkdate(item)">
+        <div *ngIf="item.isSpecial==true">
+        <mat-card class="mat-elevation-z4" >
+          <mat-card-header class="special-head">
+              <mat-card-title>{{item.itemName}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src={{item.image}} alt="{{item.itemName">
+          <mat-card-content>
+              <p class="isveg" *ngIf="item.isVeg;else elsepart" > Veg</p>
+              <ng-template #elsepart >
+                <p class="isveg">Non-Veg</p>
+              </ng-template>
+              <p class="price">Price : ${{item.price}}</p>
+              <p class="details">Quantity : {{item.quantity}}</p>
+              <p class="details">Weight : {{item.weightInGrams}}g</p>
+              <p class="details">Kcal : {{item.kcal}}</p>
+              <p class="details">Available : {{item.availableDate | date}}</p>
+          </mat-card-content>
+        </mat-card>
+        </div>
+      </div>
     </ng-container>
-  </div>
-  <div id ="details"  *ngIf="selectedItem">
-    <h4 >{{selectedItem.itemName | uppercase}}</h4>
-    <li class ="item-details">Price per unit : {{selectedItem.price}}</li>
-    <li class ="item-details">Quantity : {{selectedItem.quantity}}</li>
-    <li class ="item-details">IsVeg : {{selectedItem.isVeg}}</li>
-    <li class ="item-details">Weight in Grams : {{selectedItem.weightInGrams}}</li>
-    <li class ="item-details">Kcal : {{selectedItem.kcal}}</li>
-    <li class ="item-details">Available Date : {{selectedItem.availableDate | date}}</li>
-  </div>
-</div>
 
-<div class="special-cont">
-  <div class ="daily-items">
-    <h3>Items</h3>
-    <ng-container *ngFor="let item of items">
-      <ul *ngIf="checkdate(item)" class="items-disp">
-        <li   class="name-label" *ngIf="item.isSpecial==false"
-          [class.selected]="item === selectedItem"
-          (click)="onSelect(item)">
-          <!--<span class="badge">{{item.itemId}}</span> -->{{item.itemName}}
-        </li>
-      </ul>
-    </ng-container>
-  </div>
+
+    <ng-container *ngFor="let item of items"  >
+      <div *ngIf="checkdate(item)">
+      <div *ngIf="item.isSpecial==false">
+      <mat-card class="mat-elevation-z4" >
+        <mat-card-header class="daily-head">
+            <mat-card-title>{{item.itemName}}</mat-card-title>
+        </mat-card-header >
+        <img mat-card-image src={{item.image}} alt="{{item.itemName">
+        <mat-card-content>
+          <p class="isveg" *ngIf="item.isVeg;else elsepart" > Veg</p>
+          <ng-template #elsepart >
+            <p class="isveg">Non-Veg</p>
+          </ng-template>
+          <p class="price">Price : ${{item.price}}</p>
+          <p class="details">Quantity : {{item.quantity}}</p>
+          <p class="details">Weight in Grams : {{item.weightInGrams}}g</p>
+          <p class="details">Kcal : {{item.kcal}}</p>
+          <p class="details">Available : {{item.availableDate | date}}</p>
+        </mat-card-content>
+      </mat-card>
+      </div>
+    </div>
+  </ng-container>
+
+</div>
+          
+   
   
- 
-  
+
+
+
+

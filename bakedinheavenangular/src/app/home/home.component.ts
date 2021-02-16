@@ -12,51 +12,16 @@ import{Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  Email :string ="bakedinheaven@gmail.com";
-  Phone:string = "9987235100"
+  
 
-  users :any=[];
-  constructor(public apiService:ApiService,public router:Router) { 
-    this.apiService.getUsers().subscribe((res:any) => {
-      this.users = res
-      console.log(res);
-    })
+ 
+  constructor() { 
+    
   }
 
   ngOnInit(): void {
   }
   
-  myusername :any;
-  mypassword:any;
-  login(){
-   
-    this.users.forEach((element:any) => {
-      if((this.myusername == element.username)&&(this.mypassword== element.password))
-      {
-        if(element.isAdmin==true)
-        {
-          this.router.navigate(['/admin']);
-          console.log(this.myusername)
-        }
-        else
-        {
-          this.router.navigate(['/items']);
-        }
-      }
-     
-    });
   
-    }
-  signup()
-  {
-    this.router.navigate(['/add-user']);
-  }
-    
-    
-  }
-
-    
-
-  
-
+}
 

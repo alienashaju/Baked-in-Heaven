@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BakedinHeaven.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210204094140_UsertableMigration")]
-    partial class UsertableMigration
+    [Migration("20210213140537_ItemMigration")]
+    partial class ItemMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,18 +63,22 @@ namespace BakedinHeaven.DataAccess.Migrations
                         .UseIdentityByDefaultColumn();
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("boolean");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Password")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Username")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("UserId");
@@ -99,6 +103,7 @@ namespace BakedinHeaven.DataAccess.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ItemName")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<float>("Kcal")

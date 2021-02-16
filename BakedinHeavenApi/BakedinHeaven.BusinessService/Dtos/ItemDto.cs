@@ -22,5 +22,6 @@ namespace BakedinHeaven.BusinessService.Dtos
 
         public bool IsSpecial { get; set; }
         public DateTime AvailableDate { get; set; }
+        public string image { get; set; }
     }
 }
